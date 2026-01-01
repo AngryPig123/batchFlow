@@ -4,9 +4,9 @@
   "settings": {
     "width": 3000,
     "height": 3000,
-    "scrollTop": -830.4118,
-    "scrollLeft": -972.6892,
-    "zoomLevel": 0.36,
+    "scrollTop": -422.9135,
+    "scrollLeft": -1727.5534,
+    "zoomLevel": 0.8,
     "show": 431,
     "database": 4,
     "databaseName": "BATCH_FLOW_DOMAIN",
@@ -171,7 +171,6 @@
           "DVEqpSMbEWshzXBaPNnSd",
           "QuKS74oCt477WFhQQAGD3",
           "ZePelM8efvY8-YHj1xwvV",
-          "I1tumoptAH9-oUYwNBgt6",
           "2mnNUhZ6QjeGdUjBBdbpg",
           "juMrVTtwxY1fkGLbk6esv",
           "OsLc6bxZVqRhQH8F2eSdG",
@@ -198,7 +197,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267756090,
+          "updateAt": 1767269223224,
           "createAt": 1767264849427
         }
       },
@@ -209,7 +208,6 @@
         "columnIds": [
           "XYiO_4MWxbNC4IARjn2Gs",
           "idTTBV84A-Va23LgogzmG",
-          "kBGKw_bK_97181R02KMCy",
           "UP80fiYYnQNgnt5RXE2zF",
           "Wo4G47uIFObCnh_9fLE-b",
           "fym4cqE3DR3PhUQIA9ARf",
@@ -235,7 +233,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267759556,
+          "updateAt": 1767269230817,
           "createAt": 1767265100710
         }
       },
@@ -246,7 +244,6 @@
         "columnIds": [
           "pbCEnEKwmcQBZfDTMKIKu",
           "4_jcZZZhgh0FaO1PRNsci",
-          "GKr-5ALQa62-IYZjT5qcP",
           "FzjKIvC9AliVTPCsmlyyZ",
           "VksUT4hU_TUwU1Epd0O28",
           "QdXvUdkUP7wbJDhDI44dy",
@@ -282,7 +279,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267516531,
+          "updateAt": 1767269090514,
           "createAt": 1767265324215
         }
       },
@@ -292,7 +289,7 @@
         "comment": "주문 도메인 테이블 (주문 단위)",
         "columnIds": [
           "-VrKqQM9CfhDMmqgIK_7d",
-          "kw0MaUb8v6LJ8xMqvD9U4",
+          "SdTguLjxlgkH3SmLUPDU-",
           "5QpB1idmnpt2_cYCjmJOs",
           "PgCunUFNwiL2qGwad1pqN",
           "DjbPWM7Xt87jaqTmBu4D6",
@@ -301,12 +298,12 @@
           "wRSaEHu-cRFV4yu8nFkhi",
           "5xcb0Sw-pa_ddnn1UB-8U",
           "UDpgLlWwXuswQX5b53ujM",
-          "MIAt9_xfTs-gKuiY-5xc8",
-          "SdTguLjxlgkH3SmLUPDU-"
+          "MIAt9_xfTs-gKuiY-5xc8"
         ],
         "seqColumnIds": [
           "-VrKqQM9CfhDMmqgIK_7d",
           "kw0MaUb8v6LJ8xMqvD9U4",
+          "SdTguLjxlgkH3SmLUPDU-",
           "5QpB1idmnpt2_cYCjmJOs",
           "PgCunUFNwiL2qGwad1pqN",
           "DjbPWM7Xt87jaqTmBu4D6",
@@ -315,8 +312,7 @@
           "wRSaEHu-cRFV4yu8nFkhi",
           "5xcb0Sw-pa_ddnn1UB-8U",
           "UDpgLlWwXuswQX5b53ujM",
-          "MIAt9_xfTs-gKuiY-5xc8",
-          "SdTguLjxlgkH3SmLUPDU-"
+          "MIAt9_xfTs-gKuiY-5xc8"
         ],
         "ui": {
           "x": 1518.0053,
@@ -327,7 +323,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267917517,
+          "updateAt": 1767269085896,
           "createAt": 1767265565823
         }
       },
@@ -336,23 +332,23 @@
         "name": "OLIST_ORDER_ITEMS",
         "comment": "주문 상품 라인 테이블 (주문별 상품 구성)",
         "columnIds": [
-          "aDDXSXbEuPXvvPx2feSXq",
+          "SczO1yQMcUsRw4Dy825SY",
           "p7PDOfyfvk7cR9PKWy9Rf",
-          "K5R8LeCR2k3EjFj-QAFoz",
-          "CgdfGzhdOu5EEqKw1ODFh",
+          "p562Krmr3w0n86vcucBxu",
+          "R0sUnFmJ3FAsfYmv9tb9o",
           "tFqURZL0Dxe0oMrmgRMWd",
           "JLG9F26H5KVjBC40iGZ9L",
           "1-wyWg50VhHdRz7_tTuRh",
           "l-OPC5Z_6mha0Wi8sVBTP",
           "igqJGPaNF4alxEvgP8jgm",
-          "iRMi7NXdfUC77hsA8l1kZ",
-          "SczO1yQMcUsRw4Dy825SY",
-          "p562Krmr3w0n86vcucBxu",
-          "R0sUnFmJ3FAsfYmv9tb9o"
+          "iRMi7NXdfUC77hsA8l1kZ"
         ],
         "seqColumnIds": [
           "aDDXSXbEuPXvvPx2feSXq",
+          "SczO1yQMcUsRw4Dy825SY",
           "p7PDOfyfvk7cR9PKWy9Rf",
+          "p562Krmr3w0n86vcucBxu",
+          "R0sUnFmJ3FAsfYmv9tb9o",
           "K5R8LeCR2k3EjFj-QAFoz",
           "CgdfGzhdOu5EEqKw1ODFh",
           "tFqURZL0Dxe0oMrmgRMWd",
@@ -360,10 +356,7 @@
           "1-wyWg50VhHdRz7_tTuRh",
           "l-OPC5Z_6mha0Wi8sVBTP",
           "igqJGPaNF4alxEvgP8jgm",
-          "iRMi7NXdfUC77hsA8l1kZ",
-          "SczO1yQMcUsRw4Dy825SY",
-          "p562Krmr3w0n86vcucBxu",
-          "R0sUnFmJ3FAsfYmv9tb9o"
+          "iRMi7NXdfUC77hsA8l1kZ"
         ],
         "ui": {
           "x": 1056.1556,
@@ -374,7 +367,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267920915,
+          "updateAt": 1767269436256,
           "createAt": 1767265974434
         }
       },
@@ -383,17 +376,17 @@
         "name": "OLIST_ORDER_PAYMENTS",
         "comment": "주문 결제 정보 테이블 (주문당 N건 가능)",
         "columnIds": [
-          "_jdSG91FRWBW3cRKOQN72",
+          "opOmJgQ8IFEm-lz08VXvo",
           "Hdz4McuMCLUnzAE7ONcb2",
           "gaJY1SbqQk63tvlgqKC2y",
           "cvZ1km1a5bzwRpI2ANqxz",
           "_T7up6OZtflcvE4xFkA75",
           "VmieXrnRaoruUfZMq6cJ5",
           "1KkpsnKjQgWfJMP6SG-uZ",
-          "g81fPOvsDDD8toEB4oQ8s",
-          "opOmJgQ8IFEm-lz08VXvo"
+          "g81fPOvsDDD8toEB4oQ8s"
         ],
         "seqColumnIds": [
+          "opOmJgQ8IFEm-lz08VXvo",
           "_jdSG91FRWBW3cRKOQN72",
           "Hdz4McuMCLUnzAE7ONcb2",
           "gaJY1SbqQk63tvlgqKC2y",
@@ -401,19 +394,18 @@
           "_T7up6OZtflcvE4xFkA75",
           "VmieXrnRaoruUfZMq6cJ5",
           "1KkpsnKjQgWfJMP6SG-uZ",
-          "g81fPOvsDDD8toEB4oQ8s",
-          "opOmJgQ8IFEm-lz08VXvo"
+          "g81fPOvsDDD8toEB4oQ8s"
         ],
         "ui": {
-          "x": 2006.172,
-          "y": 458.129,
+          "x": 2049.922,
+          "y": 453.129,
           "zIndex": 720,
           "widthName": 154,
           "widthComment": 196,
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267909066,
+          "updateAt": 1767269472213,
           "createAt": 1767266168592
         }
       },
@@ -423,7 +415,7 @@
         "comment": "주문 리뷰 테이블",
         "columnIds": [
           "fYaPUzIvNWjJAMmrwcQGm",
-          "C5p88_2oIDdNs4LJBmseE",
+          "YNYerjJDH6Bobu521ec1m",
           "zN2u3-uzESRfDbkYqm4zM",
           "Yjt_c5EfK90i8skmh-_gO",
           "OY302MQfIjqjU3fMdloO9",
@@ -431,12 +423,12 @@
           "d3b-gJfBckJuLRvmo5_pl",
           "R0jcymZlEblAsdIpwgsbS",
           "oji06isTAe_bCR2H9hH9L",
-          "iAjrZtF7Mz4roHzZ7NrMd",
-          "YNYerjJDH6Bobu521ec1m"
+          "iAjrZtF7Mz4roHzZ7NrMd"
         ],
         "seqColumnIds": [
           "fYaPUzIvNWjJAMmrwcQGm",
           "C5p88_2oIDdNs4LJBmseE",
+          "YNYerjJDH6Bobu521ec1m",
           "zN2u3-uzESRfDbkYqm4zM",
           "Yjt_c5EfK90i8skmh-_gO",
           "OY302MQfIjqjU3fMdloO9",
@@ -444,8 +436,7 @@
           "d3b-gJfBckJuLRvmo5_pl",
           "R0jcymZlEblAsdIpwgsbS",
           "oji06isTAe_bCR2H9hH9L",
-          "iAjrZtF7Mz4roHzZ7NrMd",
-          "YNYerjJDH6Bobu521ec1m"
+          "iAjrZtF7Mz4roHzZ7NrMd"
         ],
         "ui": {
           "x": 1788.0968,
@@ -456,7 +447,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767267938499,
+          "updateAt": 1767269158915,
           "createAt": 1767266399804
         }
       }
@@ -1658,7 +1649,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267119085,
+          "updateAt": 1767269439749,
           "createAt": 1767265991643
         }
       },
@@ -1858,7 +1849,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267134099,
+          "updateAt": 1767269468131,
           "createAt": 1767266196904
         }
       },
@@ -2185,40 +2176,40 @@
       "QuKS74oCt477WFhQQAGD3": {
         "id": "QuKS74oCt477WFhQQAGD3",
         "tableId": "6Mwk20pkQghkU_sFCeY-F",
-        "name": "ZIP_CODE_PREFIX",
+        "name": "CUSTOMER_ZIP_CODE_PREFIX",
         "comment": "우편번호 Prefix (대표값)",
         "dataType": "NUMBER(5)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 2,
-          "widthName": 108,
+          "widthName": 182,
           "widthComment": 123,
           "widthDataType": 70,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267292068,
+          "updateAt": 1767269335884,
           "createAt": 1767267292068
         }
       },
       "idTTBV84A-Va23LgogzmG": {
         "id": "idTTBV84A-Va23LgogzmG",
         "tableId": "VQhIt8td5cKBtzknwt5Kn",
-        "name": "ZIP_CODE_PREFIX",
+        "name": "SELLER_ZIP_CODE_PREFIX",
         "comment": "우편번호 Prefix (대표값)",
         "dataType": "NUMBER(5)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 2,
-          "widthName": 108,
+          "widthName": 158,
           "widthComment": 123,
           "widthDataType": 70,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267369152,
+          "updateAt": 1767269354762,
           "createAt": 1767267369152
         }
       },
@@ -2268,17 +2259,17 @@
         "name": "ORDER_ID",
         "comment": "주문 ID (PK)",
         "dataType": "VARCHAR2(32)",
-        "default": "",
-        "options": 8,
+        "default": "복함 pk",
+        "options": 10,
         "ui": {
-          "keys": 2,
+          "keys": 3,
           "widthName": 62,
           "widthComment": 66,
           "widthDataType": 90,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267544129,
+          "updateAt": 1767269440665,
           "createAt": 1767267544129
         }
       },
@@ -2328,17 +2319,17 @@
         "name": "ORDER_ID",
         "comment": "주문 ID (PK)",
         "dataType": "VARCHAR2(32)",
-        "default": "",
-        "options": 8,
+        "default": "복함 pk",
+        "options": 10,
         "ui": {
-          "keys": 2,
+          "keys": 3,
           "widthName": 62,
           "widthComment": 66,
           "widthDataType": 90,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767267909066,
+          "updateAt": 1767269466335,
           "createAt": 1767267909066
         }
       },
@@ -2384,7 +2375,7 @@
             "QuKS74oCt477WFhQQAGD3"
           ],
           "x": 1235.6612,
-          "y": 198.0324,
+          "y": 186.0324,
           "direction": 1
         },
         "meta": {
@@ -2412,7 +2403,7 @@
             "idTTBV84A-Va23LgogzmG"
           ],
           "x": 936.5108,
-          "y": 598.4732,
+          "y": 586.4732,
           "direction": 1
         },
         "meta": {
@@ -2459,7 +2450,7 @@
             "DVEqpSMbEWshzXBaPNnSd"
           ],
           "x": 1533.6612,
-          "y": 334.0324,
+          "y": 310.0324,
           "direction": 8
         },
         "end": {
@@ -2478,7 +2469,7 @@
       },
       "b3Y8xwLBVyIR8khY2sEhE": {
         "id": "b3Y8xwLBVyIR8khY2sEhE",
-        "identification": false,
+        "identification": true,
         "relationshipType": 4,
         "startRelationshipType": 2,
         "start": {
@@ -2487,7 +2478,7 @@
             "-VrKqQM9CfhDMmqgIK_7d"
           ],
           "x": 1518.0053,
-          "y": 1026.0322999999999,
+          "y": 1014.0323,
           "direction": 1
         },
         "end": {
@@ -2515,7 +2506,7 @@
             "pbCEnEKwmcQBZfDTMKIKu"
           ],
           "x": 1090.8926000000001,
-          "y": 1076.7258000000002,
+          "y": 1064.7258000000002,
           "direction": 2
         },
         "end": {
@@ -2543,7 +2534,7 @@
             "XYiO_4MWxbNC4IARjn2Gs"
           ],
           "x": 1214.5108,
-          "y": 722.4732,
+          "y": 698.4732,
           "direction": 8
         },
         "end": {
@@ -2562,7 +2553,7 @@
       },
       "vRcgSqUmgb55Ezm9QIkiD": {
         "id": "vRcgSqUmgb55Ezm9QIkiD",
-        "identification": false,
+        "identification": true,
         "relationshipType": 4,
         "startRelationshipType": 2,
         "start": {
@@ -2579,8 +2570,8 @@
           "columnIds": [
             "opOmJgQ8IFEm-lz08VXvo"
           ],
-          "x": 2006.172,
-          "y": 594.129,
+          "x": 2049.922,
+          "y": 577.129,
           "direction": 1
         },
         "meta": {
@@ -2599,7 +2590,7 @@
             "-VrKqQM9CfhDMmqgIK_7d"
           ],
           "x": 1815.5053,
-          "y": 1198.0322999999999,
+          "y": 1174.0322999999999,
           "direction": 8
         },
         "end": {
