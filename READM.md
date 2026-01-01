@@ -56,28 +56,3 @@ GitHub Flow를 참고하되 **통합(dev)과 배포(release)를 분리한 3-브�
 
 `release-YYYYMMDD`가 `main`에 병합된 이후에는,
 반드시 해당 변경 사항을 `dev` 브랜치에도 다시 반영합니다.
-
-
-
-## Branch-based Documentation
-
-이 프로젝트는 기능 단위 브랜치 전략을 사용하며,
-각 기능 브랜치의 설계 의도와 구현 범위를 문서로 함께 관리합니다.
-
-모든 브랜치에 문서 작성을 강제하지는 않으며,
-주로 **설정, 구성, 아키텍처 결정**과 같이
-설계 의도가 중요한 변경 사항을 중심으로 문서화합니다.
-
-관련 문서는 루트 디렉토리의 `readme/` 폴더 아래에 정리되어 있으며,
-브랜치명과 동일한 디렉토리 구조를 따릅니다.
-
-### Documentation Structure
-
-```text
-readme/
-├── feature-db-h2-flyway/
-│   └── README.md
-├── feature-jpa-mybatis-dual-dao/
-│   └── README.md
-└── ...
-
