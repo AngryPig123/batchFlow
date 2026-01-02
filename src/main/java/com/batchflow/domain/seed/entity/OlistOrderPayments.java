@@ -1,8 +1,9 @@
 package com.batchflow.domain.seed.entity;
 
+import com.batchflow.domain.seed.entity.id.OlistOrderPaymentsPk;
 import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 
 /**
  * packageName    : com.batchflow.domain.seed.entity.id
- * fileName       : OlistProductCatTrans
+ * fileName       : OlistOrderPayments
  * author         : AngryPig123
  * date           : 26. 1. 2.
  * description    :
@@ -22,15 +23,20 @@ import java.time.LocalDateTime;
  */
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "OLIST_PRODUCT_CAT_TRANS", comment = "상품 카테고리 번역 마스터 테이블")
-public class OlistProductCatTrans {
+@Table(name = "OLIST_ORDER_PAYMENTS", comment = "주문 결제 정보 테이블 (주문당 N건 가능)")
+public class OlistOrderPayments {
 
-    @Id
-    @Column(name = "PRODUCT_CATEGORY_NAME", length = 60, nullable = false, comment = "상품 카테고리 코드(원본)")
-    private String productCategoryName;
+    @EmbeddedId
+    private OlistOrderPaymentsPk id;
 
-    @Column(name = "PRODUCT_CATEGORY_NAME_ENGLISH", length = 60, comment = "상품 카테고리 영문명")
-    private String productCategoryNameEnglish;
+    @Column(name = "PAYMENT_TYPE", length = 20, comment = "결제 수단")
+    private String paymentType;
+
+    @Column(name = "PAYMENT_INSTALLMENTS", comment = "할부 개월 수")
+    private Integer paymentInstallments;
+
+    @Column(name = "PAYMENT_VALUE", comment = "결제 금액")
+    private Double paymentValue;
 
     @Column(name = "INGESTED_AT", nullable = false, comment = "데이터 적재 시각")
     private LocalDateTime ingestedAt;
@@ -40,5 +46,4 @@ public class OlistProductCatTrans {
 
     @Column(name = "UPDATED_AT", comment = "레코드 수정 시각")
     private LocalDateTime updatedAt;
-
 }

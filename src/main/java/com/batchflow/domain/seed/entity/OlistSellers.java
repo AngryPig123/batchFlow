@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 /**
  * packageName    : com.batchflow.domain.seed.entity.id
- * fileName       : OlistProductCatTrans
+ * fileName       : OlistSellers
  * author         : AngryPig123
  * date           : 26. 1. 2.
  * description    :
@@ -22,15 +22,21 @@ import java.time.LocalDateTime;
  */
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "OLIST_PRODUCT_CAT_TRANS", comment = "상품 카테고리 번역 마스터 테이블")
-public class OlistProductCatTrans {
+@Table(name = "OLIST_SELLERS", comment = "판매자 도메인 테이블")
+public class OlistSellers {
 
     @Id
-    @Column(name = "PRODUCT_CATEGORY_NAME", length = 60, nullable = false, comment = "상품 카테고리 코드(원본)")
-    private String productCategoryName;
+    @Column(name = "SELLER_ID", length = 32, nullable = false, comment = "판매자 ID (PK)")
+    private String sellerId;
 
-    @Column(name = "PRODUCT_CATEGORY_NAME_ENGLISH", length = 60, comment = "상품 카테고리 영문명")
-    private String productCategoryNameEnglish;
+    @Column(name = "SELLER_ZIP_CODE_PREFIX", comment = "판매자 우편번호 Prefix")
+    private Integer sellerZipCodePrefix;
+
+    @Column(name = "SELLER_CITY", length = 64, comment = "판매자 도시명")
+    private String sellerCity;
+
+    @Column(name = "SELLER_STATE", length = 2, comment = "판매자 주/지역 코드")
+    private String sellerState;
 
     @Column(name = "INGESTED_AT", nullable = false, comment = "데이터 적재 시각")
     private LocalDateTime ingestedAt;
@@ -40,5 +46,4 @@ public class OlistProductCatTrans {
 
     @Column(name = "UPDATED_AT", comment = "레코드 수정 시각")
     private LocalDateTime updatedAt;
-
 }

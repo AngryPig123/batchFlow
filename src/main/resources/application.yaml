@@ -3,8 +3,6 @@ spring:
     name: batch-flow
   profiles:
     active: oracle
-  flyway:
-    enabled: ${spring.flyway.enabled}
 
 ---
 spring:
