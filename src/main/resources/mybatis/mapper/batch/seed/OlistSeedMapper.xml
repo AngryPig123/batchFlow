@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.batchflow.batch.seed.mapper.OlistSeedMapper">
+
+
+    <insert id="insertOlistCustomer"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistCustomersSeedRow">
+        INSERT INTO OLIST_CUSTOMERS ( /* com.batchflow.batch.seed.mapper.OlistSeedMapper.insertCustomer */
+            CUSTOMER_ID ,
+            CUSTOMER_UNIQUE_ID ,
+            CUSTOMER_ZIP_CODE_PREFIX ,
+            CUSTOMER_CITY ,
+            CUSTOMER_STATE ,
+            INGESTED_AT ,
+            CREATED_AT ,
+            UPDATED_AT)
+        VALUES (#{customerId} ,
+                #{customerUniqueId} ,
+                #{customerZipCodePrefix} ,
+                #{customerCity} ,
+                #{customerState} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistGeolocation"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistGeolocationsSeedRow">
+        INSERT INTO OLIST_GEOLOCATION (ZIP_CODE_PREFIX ,
+                                       LAT ,
+                                       LNG ,
+                                       CITY ,
+                                       STATE ,
+                                       INGESTED_AT ,
+                                       CREATED_AT ,
+                                       UPDATED_AT)
+        VALUES (#{zipCodePrefix} ,
+                #{lat} ,
+                #{lng} ,
+                #{city} ,
+                #{state} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistOrderItem"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderItemsSeedRow">
+        INSERT INTO OLIST_ORDER_ITEMS (ORDER_ID ,
+                                       ORDER_ITEM_ID ,
+                                       PRODUCT_ID ,
+                                       SELLER_ID ,
+                                       SHIPPING_LIMIT_DATE ,
+                                       PRICE ,
+                                       FREIGHT_VALUE ,
+                                       INGESTED_AT ,
+                                       CREATED_AT ,
+                                       UPDATED_AT)
+        VALUES (#{orderId} ,
+                #{orderItemId} ,
+                #{productId} ,
+                #{sellerId} ,
+                #{shippingLimitDate} ,
+                #{price} ,
+                #{freightValue} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistOrderPayment"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderPaymentsSeedRow">
+        INSERT INTO OLIST_ORDER_PAYMENTS (ORDER_ID ,
+                                          PAYMENT_SEQUENTIAL ,
+                                          PAYMENT_TYPE ,
+                                          PAYMENT_INSTALLMENTS ,
+                                          PAYMENT_VALUE ,
+                                          INGESTED_AT ,
+                                          CREATED_AT ,
+                                          UPDATED_AT)
+        VALUES (#{orderId} ,
+                #{paymentSequential} ,
+                #{paymentType} ,
+                #{paymentInstallments} ,
+                #{paymentValue} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistOrderReview"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderReviewsSeedRow">
+        INSERT INTO OLIST_ORDER_REVIEWS (REVIEW_ID ,
+                                         ORDER_ID ,
+                                         REVIEW_SCORE ,
+                                         REVIEW_COMMENT_TITLE ,
+                                         REVIEW_COMMENT_MESSAGE ,
+                                         REVIEW_CREATION_DATE ,
+                                         REVIEW_ANSWER_TIMESTAMP ,
+                                         INGESTED_AT ,
+                                         CREATED_AT ,
+                                         UPDATED_AT)
+        VALUES (#{reviewId} ,
+                #{orderId} ,
+                #{reviewScore} ,
+                #{reviewCommentTitle} ,
+                #{reviewCommentMessage} ,
+                #{reviewCreationDate} ,
+                #{reviewAnswerTimestamp} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistOrder"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrdersSeedRow">
+        INSERT INTO OLIST_ORDERS (ORDER_ID ,
+                                  CUSTOMER_ID ,
+                                  ORDER_STATUS ,
+                                  ORDER_PURCHASE_TIMESTAMP ,
+                                  ORDER_APPROVED_AT ,
+                                  ORDER_DELIVERED_CARRIER_DATE ,
+                                  ORDER_DELIVERED_CUSTOMER_DATE ,
+                                  ORDER_ESTIMATED_DELIVERY_DATE ,
+                                  INGESTED_AT ,
+                                  CREATED_AT ,
+                                  UPDATED_AT)
+        VALUES (#{orderId} ,
+                #{customerId} ,
+                #{orderStatus} ,
+                #{orderPurchaseTimestamp} ,
+                #{orderApprovedAt} ,
+                #{orderDeliveredCarrierDate} ,
+                #{orderDeliveredCustomerDate} ,
+                #{orderEstimatedDeliveryDate} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistProductCatTran"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistProductCatTransSeedRow">
+        INSERT INTO OLIST_PRODUCT_CAT_TRANS (PRODUCT_CATEGORY_NAME ,
+                                             PRODUCT_CATEGORY_NAME_ENGLISH ,
+                                             INGESTED_AT ,
+                                             CREATED_AT ,
+                                             UPDATED_AT)
+        VALUES (#{productCategoryName} ,
+                #{productCategoryNameEnglish} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistProduct"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistProductsSeedRow">
+        INSERT INTO OLIST_PRODUCTS (PRODUCT_ID ,
+                                    PRODUCT_CATEGORY_NAME ,
+                                    PRODUCT_NAME_LENGHT ,
+                                    PRODUCT_DESCRIPTION_LENGHT ,
+                                    PRODUCT_PHOTOS_QTY ,
+                                    PRODUCT_WEIGHT_G ,
+                                    PRODUCT_LENGTH_CM ,
+                                    PRODUCT_HEIGHT_CM ,
+                                    PRODUCT_WIDTH_CM ,
+                                    INGESTED_AT ,
+                                    CREATED_AT ,
+                                    UPDATED_AT)
+        VALUES (#{productId} ,
+                #{productCategoryName} ,
+                #{productNameLenght} ,
+                #{productDescriptionLenght} ,
+                #{productPhotosQty} ,
+                #{productWeightG} ,
+                #{productLengthCm} ,
+                #{productHeightCm} ,
+                #{productWidthCm} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+    <insert id="insertOlistSeller"
+            parameterType="com.batchflow.batch.seed.dto.insert.OlistSellersSeedRow">
+        INSERT INTO OLIST_SELLERS (SELLER_ID ,
+                                   SELLER_ZIP_CODE_PREFIX ,
+                                   SELLER_CITY ,
+                                   SELLER_STATE ,
+                                   INGESTED_AT ,
+                                   CREATED_AT ,
+                                   UPDATED_AT)
+        VALUES (#{sellerId} ,
+                #{sellerZipCodePrefix} ,
+                #{sellerCity} ,
+                #{sellerState} ,
+                SYSDATE ,
+                SYSDATE ,
+                SYSDATE)
+    </insert>
+
+</mapper>

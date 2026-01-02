@@ -1,11 +1,5 @@
 package com.batchflow.config;
 
-import java.util.stream.Stream;
-
-import javax.sql.DataSource;
-
-import org.apache.ibatis.session.LocalCacheScope;
-import org.apache.ibatis.type.JdbcType;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
+
+import javax.sql.DataSource;
+import java.util.stream.Stream;
 
 /**
  * packageName    : com.batchflow.config
@@ -26,7 +23,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * - snake_case -> camelCase 매핑(mapUnderscoreToCamelCase)
  * - TypeHandler 자동 스캔(typeHandlersPackage)
  * - 배치/대량 처리에 유리한 캐시/타임아웃 기본값
- *
+ * <p>
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
@@ -40,13 +37,16 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 public class MybatisConfig {
 
     private static final String TYPE_HANDLERS_PACKAGE = "com.batchflow";
+    private static final String TYPE_ALIASES_PACKAGE = "com.batchflow";
 
     private static final String[] MAPPER_LOCATION_PATTERNS = {
-            "classpath*:mybatis/mapper/**/*.xml"
+            "classpath*:mybatis/mapper/**/*.xml",
+            "classpath*:mybatis/mapper/**/**/*.xml",
     };
 
     @Bean
     public ConfigurationCustomizer mybatisConfigurationCustomizer() {
+
         return configuration -> {
             configuration.setMapUnderscoreToCamelCase(true);
         };
@@ -57,6 +57,7 @@ public class MybatisConfig {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
         factoryBean.setTypeHandlersPackage(TYPE_HANDLERS_PACKAGE);
+        factoryBean.setTypeAliasesPackage(TYPE_ALIASES_PACKAGE);
         factoryBean.setMapperLocations(resolveMapperLocations());
         return factoryBean.getObject();
     }
