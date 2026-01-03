@@ -1,4 +1,4 @@
-package com.batchflow.batch.seed.dto.insert;
+package com.batchflow.bootstrap.dto.insert;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * packageName    : com.batchflow.batch.seed.dto
- * fileName       : OlistOrderItemsSeedRow
+ * fileName       : OlistOrderReviewsSeedRow
  * author         : AngryPig123
  * date           : 26. 1. 2.
  * description    :
@@ -22,28 +22,29 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class OlistOrderItemsSeedRow {
+public class OlistOrderReviewsSeedRow {
+
+    @JsonProperty("review_id")
+    private String reviewId;
 
     @JsonProperty("order_id")
     private String orderId;
 
-    @JsonProperty("order_item_id")
-    private Integer orderItemId;
+    @JsonProperty("review_score")
+    private Integer reviewScore;
 
-    @JsonProperty("product_id")
-    private String productId;
+    @JsonProperty("review_comment_title")
+    private String reviewCommentTitle;
 
-    @JsonProperty("seller_id")
-    private String sellerId;
+    @JsonProperty("review_comment_message")
+    private String reviewCommentMessage;
 
-    @JsonProperty("shipping_limit_date")
+    @JsonProperty("review_creation_date")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime shippingLimitDate;
+    private LocalDateTime reviewCreationDate;
 
-    @JsonProperty("price")
-    private Double price;
-
-    @JsonProperty("freight_value")
-    private Double freightValue;
+    @JsonProperty("review_answer_timestamp")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime reviewAnswerTimestamp;
 
 }

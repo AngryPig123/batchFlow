@@ -1,6 +1,6 @@
-package com.batchflow.batch.seed.loader;
+package com.batchflow.bootstrap.loader;
 
-import com.batchflow.batch.seed.dto.SeedLoadResult;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
@@ -19,7 +19,7 @@ import java.io.InputStream;
  * fileName       : BulkCsvLoader
  * author         : AngryPig123
  * date           : 26. 1. 2.
- * description    :
+ * description    : csv 데이터 bulk insert
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------

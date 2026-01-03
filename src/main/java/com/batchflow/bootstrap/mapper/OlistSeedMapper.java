@@ -1,6 +1,6 @@
-package com.batchflow.batch.seed.mapper;
+package com.batchflow.bootstrap.mapper;
 
-import com.batchflow.batch.seed.dto.insert.*;
+import com.batchflow.bootstrap.dto.insert.*;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

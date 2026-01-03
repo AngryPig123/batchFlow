@@ -2,7 +2,7 @@ spring:
   application:
     name: batch-flow
   profiles:
-    active: oracle
+    active: h2
 
 ---
 spring:

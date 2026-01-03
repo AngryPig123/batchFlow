@@ -1,8 +1,6 @@
-package com.batchflow.batch.seed.dto;
+package com.batchflow.bootstrap.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -10,7 +8,7 @@ import lombok.ToString;
  * fileName       : SeedLoadResult
  * author         : AngryPig123
  * date           : 26. 1. 2.
- * description    :
+ * description    : 벌크 실행 결과 카운트 리턴.
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
