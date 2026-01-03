@@ -19,7 +19,7 @@ import java.io.InputStream;
  * fileName       : BulkCsvLoader
  * author         : AngryPig123
  * date           : 26. 1. 2.
- * description    :
+ * description    : csv 데이터 bulk insert
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------

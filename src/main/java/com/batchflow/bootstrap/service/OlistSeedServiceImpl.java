@@ -36,7 +36,7 @@ public class OlistSeedServiceImpl implements OlistSeedService {
     private final ResourceLoader resourceLoader;
     private final SqlSessionFactory sqlSessionFactory;
 
-    private final int chunkSize = 1_000;
+    private final int CHUNK_SIZE = 1_000;
 
     @Override
     public <T> SeedLoadResult load(
@@ -51,7 +51,7 @@ public class OlistSeedServiceImpl implements OlistSeedService {
                     type,
                     inserterProvider,
                     inputStream,
-                    chunkSize,
+                    CHUNK_SIZE,
                     sqlSessionFactory
             );
         } catch (IOException ioe) {
@@ -60,7 +60,7 @@ public class OlistSeedServiceImpl implements OlistSeedService {
         return result;
     }
 
-    public InputStream fromClasspath(String path) throws IOException {
+    private InputStream fromClasspath(String path) throws IOException {
         Resource resource = resourceLoader.getResource("classpath:" + path);
         return resource.getInputStream();
     }

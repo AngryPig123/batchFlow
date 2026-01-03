@@ -8,7 +8,7 @@ import lombok.ToString;
  * fileName       : SeedLoadResult
  * author         : AngryPig123
  * date           : 26. 1. 2.
- * description    :
+ * description    : 벌크 실행 결과 카운트 리턴.
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
