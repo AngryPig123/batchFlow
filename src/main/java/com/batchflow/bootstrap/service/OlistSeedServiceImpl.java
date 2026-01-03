@@ -1,9 +1,9 @@
-package com.batchflow.batch.seed.service;
+package com.batchflow.bootstrap.service;
 
-import com.batchflow.batch.seed.loader.BulkCsvLoader;
-import com.batchflow.batch.seed.dto.SeedLoadResult;
-import com.batchflow.batch.seed.loader.Inserter;
-import com.batchflow.batch.seed.type.SeedCsv;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
+import com.batchflow.bootstrap.loader.BulkCsvLoader;
+import com.batchflow.bootstrap.loader.Inserter;
+import com.batchflow.bootstrap.type.SeedCsv;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSession;

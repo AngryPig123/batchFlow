@@ -1,4 +1,4 @@
-package com.batchflow.batch.seed.dto.insert;
+package com.batchflow.bootstrap.dto.insert;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 
 /**
  * packageName    : com.batchflow.batch.seed.dto
- * fileName       : OlistOrderPaymentsSeedRow
+ * fileName       : OlistGeolocationSeedRow
  * author         : AngryPig123
  * date           : 26. 1. 2.
  * description    :
@@ -19,21 +19,21 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class OlistOrderPaymentsSeedRow {
+public class OlistGeolocationsSeedRow {
 
-    @JsonProperty("order_id")
-    private String orderId;
+    @JsonProperty("geolocation_zip_code_prefix")
+    private String zipCodePrefix;
 
-    @JsonProperty("payment_sequential")
-    private Integer paymentSequential;
+    @JsonProperty("geolocation_lat")
+    private Double lat;
 
-    @JsonProperty("payment_type")
-    private String paymentType;
+    @JsonProperty("geolocation_lng")
+    private Double lng;
 
-    @JsonProperty("payment_installments")
-    private Integer paymentInstallments;
+    @JsonProperty("geolocation_city")
+    private String city;
 
-    @JsonProperty("payment_value")
-    private Double paymentValue;
+    @JsonProperty("geolocation_state")
+    private String state;
 
 }

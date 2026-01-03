@@ -1,8 +1,9 @@
 package com.batchflow.batch.seed.service;
 
-import com.batchflow.batch.seed.dto.insert.OlistCustomersSeedRow;
-import com.batchflow.batch.seed.dto.SeedLoadResult;
-import com.batchflow.batch.seed.mapper.OlistSeedMapper;
+import com.batchflow.bootstrap.dto.insert.OlistCustomersSeedRow;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
+import com.batchflow.bootstrap.mapper.OlistSeedMapper;
+import com.batchflow.bootstrap.service.OlistSeedService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.batchflow.batch.seed.loader;
+package com.batchflow.bootstrap.loader;
 
 /**
  * packageName    : com.batchflow.batch.seed

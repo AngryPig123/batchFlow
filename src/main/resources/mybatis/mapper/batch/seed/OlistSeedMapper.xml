@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.batchflow.batch.seed.mapper.OlistSeedMapper">
+<mapper namespace="com.batchflow.bootstrap.mapper.OlistSeedMapper">
 
 
     <insert id="insertOlistCustomer"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistCustomersSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistCustomersSeedRow">
         INSERT INTO OLIST_CUSTOMERS ( /* com.batchflow.batch.seed.mapper.OlistSeedMapper.insertCustomer */
             CUSTOMER_ID ,
             CUSTOMER_UNIQUE_ID ,
@@ -28,7 +28,7 @@
     </insert>
 
     <insert id="insertOlistGeolocation"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistGeolocationsSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistGeolocationsSeedRow">
         INSERT INTO OLIST_GEOLOCATION (ZIP_CODE_PREFIX ,
                                        LAT ,
                                        LNG ,
@@ -48,7 +48,7 @@
     </insert>
 
     <insert id="insertOlistOrderItem"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderItemsSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistOrderItemsSeedRow">
         INSERT INTO OLIST_ORDER_ITEMS (ORDER_ID ,
                                        ORDER_ITEM_ID ,
                                        PRODUCT_ID ,
@@ -72,7 +72,7 @@
     </insert>
 
     <insert id="insertOlistOrderPayment"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderPaymentsSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistOrderPaymentsSeedRow">
         INSERT INTO OLIST_ORDER_PAYMENTS (ORDER_ID ,
                                           PAYMENT_SEQUENTIAL ,
                                           PAYMENT_TYPE ,
@@ -92,7 +92,7 @@
     </insert>
 
     <insert id="insertOlistOrderReview"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrderReviewsSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistOrderReviewsSeedRow">
         INSERT INTO OLIST_ORDER_REVIEWS (REVIEW_ID ,
                                          ORDER_ID ,
                                          REVIEW_SCORE ,
@@ -116,7 +116,7 @@
     </insert>
 
     <insert id="insertOlistOrder"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistOrdersSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistOrdersSeedRow">
         INSERT INTO OLIST_ORDERS (ORDER_ID ,
                                   CUSTOMER_ID ,
                                   ORDER_STATUS ,
@@ -142,7 +142,7 @@
     </insert>
 
     <insert id="insertOlistProductCatTran"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistProductCatTransSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistProductCatTransSeedRow">
         INSERT INTO OLIST_PRODUCT_CAT_TRANS (PRODUCT_CATEGORY_NAME ,
                                              PRODUCT_CATEGORY_NAME_ENGLISH ,
                                              INGESTED_AT ,
@@ -156,7 +156,7 @@
     </insert>
 
     <insert id="insertOlistProduct"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistProductsSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistProductsSeedRow">
         INSERT INTO OLIST_PRODUCTS (PRODUCT_ID ,
                                     PRODUCT_CATEGORY_NAME ,
                                     PRODUCT_NAME_LENGHT ,
@@ -184,7 +184,7 @@
     </insert>
 
     <insert id="insertOlistSeller"
-            parameterType="com.batchflow.batch.seed.dto.insert.OlistSellersSeedRow">
+            parameterType="com.batchflow.bootstrap.dto.insert.OlistSellersSeedRow">
         INSERT INTO OLIST_SELLERS (SELLER_ID ,
                                    SELLER_ZIP_CODE_PREFIX ,
                                    SELLER_CITY ,

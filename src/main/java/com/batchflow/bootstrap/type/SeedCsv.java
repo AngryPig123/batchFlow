@@ -1,6 +1,6 @@
-package com.batchflow.batch.seed.type;
+package com.batchflow.bootstrap.type;
 
-import com.batchflow.batch.seed.dto.insert.*;
+import com.batchflow.bootstrap.dto.insert.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,6 +1,6 @@
-package com.batchflow.batch.seed.loader;
+package com.batchflow.bootstrap.loader;
 
-import com.batchflow.batch.seed.dto.SeedLoadResult;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
