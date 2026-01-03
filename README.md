@@ -23,7 +23,7 @@ CSV 형태의 원천 데이터를 관계형 데이터베이스 스키마로 재�
 - **Kaggle**: Brazilian E-Commerce Public Dataset by Olist
 - **제공 형식**: CSV
 - **활용 방식**
-  - CSV → 테이블 DDL 정의
+  - CSV → 테이블 DDL 정의d
   - Flyway 기반 스키마 버전 관리
   - Seed 데이터 적재용 배치 구현
 
