@@ -38,9 +38,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-
-    //  csv parser
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv'
+    implementation 'p6spy:p6spy:3.9.1'
 
     //  dao
     runtimeOnly 'com.h2database:h2'
