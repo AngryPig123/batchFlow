@@ -1,4 +1,4 @@
-package com.batchflow.batch.seed.dto.insert;
+package com.batchflow.bootstrap.dto.insert;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,7 +1,7 @@
-package com.batchflow.batch.seed.service;
+package com.batchflow.bootstrap.service;
 
-import com.batchflow.batch.seed.dto.SeedLoadResult;
-import com.batchflow.batch.seed.loader.Inserter;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
+import com.batchflow.bootstrap.loader.Inserter;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.function.Function;

@@ -1,13 +1,12 @@
-package com.batchflow.batch.seed.bootstrap;
+package com.batchflow.bootstrap;
 
-import com.batchflow.batch.seed.dto.SeedLoadResult;
-import com.batchflow.batch.seed.dto.insert.*;
-import com.batchflow.batch.seed.mapper.OlistSeedMapper;
-import com.batchflow.batch.seed.service.OlistSeedService;
+import com.batchflow.bootstrap.dto.SeedLoadResult;
+import com.batchflow.bootstrap.dto.insert.*;
+import com.batchflow.bootstrap.mapper.OlistSeedMapper;
+import com.batchflow.bootstrap.service.OlistSeedService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
