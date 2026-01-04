@@ -19,13 +19,12 @@
              , NVL(OI.FREIGHT_VALUE, 0)                                     AS FREIGHT
              , NVL(OI.PRICE, 0) + NVL(OI.FREIGHT_VALUE, 0)                  AS REVENUE
              , O.ORDER_STATUS                                               AS ORDER_STATUS
-             , CASE WHEN O.ORDER_STATUS = 'delivered' THEN 'Y' ELSE 'N' END AS ISDELIVEREDFLAG
+             , CASE WHEN O.ORDER_STATUS = 'delivered' THEN 'Y' ELSE 'N' END AS IS_DELIVERED_FLAG
         FROM OLIST_ORDER_ITEMS OI
                  INNER JOIN OLIST_ORDERS O ON O.ORDER_ID = OI.ORDER_ID
         ORDER BY OI.ORDER_ID, OI.ORDER_ITEM_ID
     </select>
 
-    <!-- Writer용: 단순 INSERT -->
     <insert id="insertFactOrderItem"
             parameterType="com.batchflow.batch.fact.entity.FactOrderItemEntity">
         INSERT INTO FACT_ORDER_ITEM (AGGREGATE_AT , ORDER_ID , ORDER_ITEM_ID , SELLER_ID ,
