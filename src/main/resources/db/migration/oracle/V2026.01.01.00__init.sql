@@ -132,7 +132,7 @@ COMMENT ON COLUMN OLIST_PRODUCTS.UPDATED_AT IS '레코드 수정 시각';
  * ========================================================= */
 CREATE TABLE OLIST_ORDERS
 (
-    ORDER_ID                      VARCHAR2(32)  ,
+    ORDER_ID                      VARCHAR2(32) ,
     CUSTOMER_ID                   VARCHAR2(32)                   NOT NULL ,
     ORDER_STATUS                  VARCHAR2(20)                   NOT NULL ,
     ORDER_PURCHASE_TIMESTAMP      TIMESTAMP ,
@@ -171,15 +171,15 @@ COMMENT ON COLUMN OLIST_ORDERS.UPDATED_AT IS '레코드 수정 시각';
  * ========================================================= */
 CREATE TABLE OLIST_ORDER_ITEMS
 (
-    ORDER_ID            VARCHAR2(32)                   NOT NULL ,
-    ORDER_ITEM_ID       INTEGER                        NOT NULL ,
-    PRODUCT_ID          VARCHAR2(32)                   NOT NULL ,
-    SELLER_ID           VARCHAR2(32)                   NOT NULL ,
+    ORDER_ID            VARCHAR2(32)                        NOT NULL ,
+    ORDER_ITEM_ID       INTEGER                             NOT NULL ,
+    PRODUCT_ID          VARCHAR2(32)                        NOT NULL ,
+    SELLER_ID           VARCHAR2(32)                        NOT NULL ,
     SHIPPING_LIMIT_DATE TIMESTAMP ,
-    PRICE               BINARY_DOUBLE ,
-    FREIGHT_VALUE       BINARY_DOUBLE ,
-    INGESTED_AT         TIMESTAMP DEFAULT SYSTIMESTAMP NOT NULL ,
-    CREATED_AT          TIMESTAMP DEFAULT SYSTIMESTAMP NOT NULL ,
+    PRICE               NUMBER(18 , 2) DEFAULT 0 ,
+    FREIGHT_VALUE       NUMBER(18 , 2) DEFAULT 0 ,
+    INGESTED_AT         TIMESTAMP      DEFAULT SYSTIMESTAMP NOT NULL ,
+    CREATED_AT          TIMESTAMP      DEFAULT SYSTIMESTAMP NOT NULL ,
     UPDATED_AT          TIMESTAMP ,
     CONSTRAINT PK_OLIST_ORDER_ITEMS PRIMARY KEY ( ORDER_ID , ORDER_ITEM_ID )
 );
@@ -201,13 +201,13 @@ COMMENT ON COLUMN OLIST_ORDER_ITEMS.UPDATED_AT IS '레코드 수정 시각';
  * ========================================================= */
 CREATE TABLE OLIST_ORDER_PAYMENTS
 (
-    ORDER_ID             VARCHAR2(32)                   NOT NULL ,
-    PAYMENT_SEQUENTIAL   INTEGER                        NOT NULL ,
+    ORDER_ID             VARCHAR2(32)                        NOT NULL ,
+    PAYMENT_SEQUENTIAL   INTEGER                             NOT NULL ,
     PAYMENT_TYPE         VARCHAR2(20) ,
     PAYMENT_INSTALLMENTS INTEGER ,
-    PAYMENT_VALUE        BINARY_DOUBLE ,
-    INGESTED_AT          TIMESTAMP DEFAULT SYSTIMESTAMP NOT NULL ,
-    CREATED_AT           TIMESTAMP DEFAULT SYSTIMESTAMP NOT NULL ,
+    PAYMENT_VALUE        NUMBER(18 , 2) DEFAULT 0 ,
+    INGESTED_AT          TIMESTAMP      DEFAULT SYSTIMESTAMP NOT NULL ,
+    CREATED_AT           TIMESTAMP      DEFAULT SYSTIMESTAMP NOT NULL ,
     UPDATED_AT           TIMESTAMP ,
     CONSTRAINT PK_OLIST_ORDER_PAYMENTS PRIMARY KEY ( ORDER_ID , PAYMENT_SEQUENTIAL )
 );
