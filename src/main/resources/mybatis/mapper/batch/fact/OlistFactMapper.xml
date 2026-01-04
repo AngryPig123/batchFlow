@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.batchflow.batch.fact.mapper.FactOlistMapper">
+
+    <select id="selectFactOrderItemsByDeliveredDate"
+            resultType="com.batchflow.batch.fact.entity.FactOrderItemEntity">
+        SELECT /* com.batchflow.batch.fact.entity.FactOrderItemEntity.selectFactOrderItemsByDeliveredDate */
+            OI.ORDER_ID                                                     AS ORDER_ID
+             , OI.ORDER_ITEM_ID                                             AS ORDER_ITEM_ID
+             , OI.SELLER_ID                                                 AS SELLER_ID
+             , O.CUSTOMER_ID                                                AS CUSTOMER_ID
+             , OI.PRODUCT_ID                                                AS PRODUCT_ID
+             , O.ORDER_PURCHASE_TIMESTAMP                                   AS ORDER_PURCHASE_TIMESTAMP
+             , O.ORDER_APPROVED_AT                                          AS ORDER_APPROVED_AT
+             , O.ORDER_DELIVERED_CUSTOMER_DATE                              AS ORDER_DELIVERED_CUSTOMER_DATE
+             , NVL(OI.PRICE, 0)                                             AS GMV
+             , NVL(OI.FREIGHT_VALUE, 0)                                     AS FREIGHT
+             , NVL(OI.PRICE, 0) + NVL(OI.FREIGHT_VALUE, 0)                  AS REVENUE
+             , O.ORDER_STATUS                                               AS ORDER_STATUS
+             , CASE WHEN O.ORDER_STATUS = 'delivered' THEN 'Y' ELSE 'N' END AS ISDELIVEREDFLAG
+        FROM OLIST_ORDER_ITEMS OI
+                 INNER JOIN OLIST_ORDERS O ON O.ORDER_ID = OI.ORDER_ID
+        ORDER BY OI.ORDER_ID, OI.ORDER_ITEM_ID
+    </select>
+
+    <!-- Writer용: 단순 INSERT -->
+    <insert id="insertFactOrderItem"
+            parameterType="com.batchflow.batch.fact.entity.FactOrderItemEntity">
+        INSERT INTO FACT_ORDER_ITEM (AGGREGATE_AT , ORDER_ID , ORDER_ITEM_ID , SELLER_ID ,
+                                     CUSTOMER_ID , PRODUCT_ID , PURCHASE_DATE_KEY , APPROVE_DATE_KEY ,
+                                     DELIVERED_DATE_KEY , GMV , FREIGHT , REVENUE , ORDER_STATUS ,
+                                     IS_DELIVERED_FLAG , CREATED_AT , UPDATED_AT)
+        VALUES (SYSDATE , #{orderId} , #{orderItemId} , #{sellerId} ,
+                #{customerId} , #{productId} , #{purchaseDateKey} , #{approveDateKey} ,
+                #{deliveredDateKey} , #{gmv} , #{freight} , #{revenue} , #{orderStatus} ,
+                #{isDeliveredFlag} , SYSDATE , SYSDATE)
+    </insert>
+
+</mapper>

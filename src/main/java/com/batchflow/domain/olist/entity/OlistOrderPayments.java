@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -36,7 +37,7 @@ public class OlistOrderPayments {
     private Integer paymentInstallments;
 
     @Column(name = "PAYMENT_VALUE") // , comment = "결제 금액")
-    private Double paymentValue;
+    private BigDecimal paymentValue;
 
     @Column(name = "INGESTED_AT", nullable = false) // , comment = "데이터 적재 시각")
     private LocalDateTime ingestedAt;

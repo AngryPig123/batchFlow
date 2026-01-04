@@ -8,6 +8,7 @@ import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -39,10 +40,10 @@ public class OlistOrderItems {
     private LocalDateTime shippingLimitDate;
 
     @Column(name = "PRICE") // , comment = "상품 가격")
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "FREIGHT_VALUE") // , comment = "배송비")
-    private Double freightValue;
+    private BigDecimal freightValue;
 
     @Column(name = "INGESTED_AT", nullable = false) // , comment = "데이터 적재 시각")
     private LocalDateTime ingestedAt;
