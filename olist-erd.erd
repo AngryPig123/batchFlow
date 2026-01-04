@@ -4,9 +4,9 @@
   "settings": {
     "width": 3000,
     "height": 3000,
-    "scrollTop": -862.3062,
-    "scrollLeft": -1007.4639,
-    "zoomLevel": 0.42,
+    "scrollTop": -1032.0658,
+    "scrollLeft": -846.6633,
+    "zoomLevel": 0.75,
     "show": 431,
     "database": 4,
     "databaseName": "BATCH_FLOW_DOMAIN",
@@ -287,7 +287,7 @@
           "color": ""
         },
         "meta": {
-          "updateAt": 1767280804993,
+          "updateAt": 1767447786584,
           "createAt": 1767265324215
         }
       },
@@ -2760,16 +2760,16 @@
         "comment": "주문 ID (PK)",
         "dataType": "VARCHAR2(32)",
         "default": "",
-        "options": 8,
+        "options": 10,
         "ui": {
-          "keys": 2,
+          "keys": 3,
           "widthName": 62,
           "widthComment": 66,
           "widthDataType": 90,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1767282654749,
+          "updateAt": 1767443949836,
           "createAt": 1767282568264
         }
       },
@@ -3285,7 +3285,7 @@
       },
       "skET58VPwmyqKZfrvU5t3": {
         "id": "skET58VPwmyqKZfrvU5t3",
-        "identification": false,
+        "identification": true,
         "relationshipType": 4,
         "startRelationshipType": 2,
         "start": {

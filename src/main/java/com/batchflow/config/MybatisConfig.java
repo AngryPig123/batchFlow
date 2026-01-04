@@ -1,5 +1,6 @@
 package com.batchflow.config;
 
+import org.apache.ibatis.type.JdbcType;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -59,6 +60,10 @@ public class MybatisConfig {
         factoryBean.setTypeHandlersPackage(TYPE_HANDLERS_PACKAGE);
         factoryBean.setTypeAliasesPackage(TYPE_ALIASES_PACKAGE);
         factoryBean.setMapperLocations(resolveMapperLocations());
+        org.apache.ibatis.session.Configuration mybatisConfig = new org.apache.ibatis.session.Configuration();
+        mybatisConfig.setJdbcTypeForNull(JdbcType.NULL);
+        mybatisConfig.setMapUnderscoreToCamelCase(true);
+        factoryBean.setConfiguration(mybatisConfig);
         return factoryBean.getObject();
     }
 
