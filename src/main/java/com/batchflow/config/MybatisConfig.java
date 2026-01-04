@@ -62,6 +62,7 @@ public class MybatisConfig {
         factoryBean.setMapperLocations(resolveMapperLocations());
         org.apache.ibatis.session.Configuration mybatisConfig = new org.apache.ibatis.session.Configuration();
         mybatisConfig.setJdbcTypeForNull(JdbcType.NULL);
+        mybatisConfig.setMapUnderscoreToCamelCase(true);
         factoryBean.setConfiguration(mybatisConfig);
         return factoryBean.getObject();
     }
